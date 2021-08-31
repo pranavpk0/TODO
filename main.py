@@ -9,9 +9,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.show()
         self.add_button.clicked.connect(self.add_to_list)
-        self.del_button.clicked.connect(self.removeSel)
+        self.del_button.clicked.connect(self.removesel)
         self.clear_all.clicked.connect(self.remove_all)
-        
+
         self.show_at_start()
 
     def add_to_list(self):
@@ -31,12 +31,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.listWidget.addItem(i)
 
     def remove_and_finish(self):
-                # REMOVING SELECTED ONE
-        listItems=self.listWidget.selectedItems()
-        if not listItems: return
+        # REMOVING SELECTED ONE
+        listItems = self.listWidget.selectedItems()
+        # if not listItems:
+        #     return
         for item in listItems:
             self.listWidget.takeItem(self.listWidget.row(item))
-        
+
         # UPDATEING FILE
         items = [self.listWidget.item(x).text() for x in range(self.listWidget.count())]
         items_str = str(items)
@@ -44,22 +45,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         items_st = items_str.strip("[")
         items_st = items_st.strip("]")
         items_st = items_st.strip("'")
-        
 
         with open("file.txt", "w") as f:
             f.write(str(items_st))
 
-
-    def removeSel(self):
+    def removesel(self):
         self.remove_and_finish()
-
-
 
     def remove_all(self):
         self.listWidget.clear()
         with open("file.txt", "w") as f:
             f.write('')
-
 
 
 if __name__ == '__main__':

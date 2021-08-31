@@ -44,7 +44,7 @@ class Ui_MainWindow(object):
         self.clear_all.setGeometry(QtCore.QRect(390, 110, 75, 23))
         self.clear_all.setObjectName("clear_all")
         self.finish = QtWidgets.QPushButton(self.centralwidget)
-        self.finish.setGeometry(QtCore.QRect(60, 250, 361, 23))
+        self.finish.setGeometry(QtCore.QRect(60, 250, 361, 25))
         self.finish.setObjectName("finish")
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -53,11 +53,11 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "TODO"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "TODO Manager"))
         self.add_button.setText(_translate("MainWindow", "ADD"))
         self.del_button.setText(_translate("MainWindow", "Delete"))
         self.clear_all.setText(_translate("MainWindow", "Clear All"))
-        self.finish.setText(_translate("MainWindow", "Finished"))
+        self.finish.setText(_translate("MainWindow", "Finished Task"))
 
 
 if __name__ == "__main__":

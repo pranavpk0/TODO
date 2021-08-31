@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>TODO</string>
+   <string>TODO Manager</string>
   </property>
   <property name="windowIcon">
    <iconset>
@@ -107,7 +107,7 @@
       <x>390</x>
       <y>110</y>
       <width>75</width>
-      <height>23</height>
+      <height>25</height>
      </rect>
     </property>
     <property name="text">
@@ -124,7 +124,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Finished</string>
+     <string>Finished Task</string>
     </property>
    </widget>
   </widget>
